@@ -18,5 +18,5 @@ app.use("/api/customers", customers);
 app.use("/", home);
 
 // Setting a default PORT
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`listening to port ${port}...`));
