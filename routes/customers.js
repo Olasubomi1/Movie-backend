@@ -1,33 +1,7 @@
-const mongoose = require("mongoose");
-const Joi = require("joi");
+const { Customer, validateCustomer } = require("../models/customer");
 const express = require("express");
 const router = express.Router();
 
-const Customer = mongoose.model(
-  "Customer",
-  new mongoose.Schema({
-    name: {
-      type: String,
-      required: true,
-      minlength: 2,
-      maxlength: 50,
-    },
-    isGold: {
-      type: Boolean,
-      default: false,
-    },
-    phone: {
-      type: Number,
-      required: true,
-      minlength: 5,
-      maxlength: 15,
-    },
-    __v: {
-      type: Number,
-      default: 0,
-    },
-  })
-);
 // Getting the list of customer
 router.get("/", async (req, res) => {
   const customer = await Customer.find().sort("name");
@@ -54,7 +28,7 @@ router.get("/:id", async (req, res) => {
   let customer;
   try {
     customer = await Customer.find({ _id: req.params.id });
-    console.log(customer);
+    // console.log(customer);
   } catch (err) {
     console.log(err.message);
   }
@@ -90,14 +64,5 @@ router.delete("/:id", async (req, res) => {
     return res.status(404).send("The customer with the given ID was not found");
   res.send(customer);
 });
-function validateCustomer(customer) {
-  const schema = {
-    name: Joi.string().min(5).max(50).required(),
-    phone: Joi.string().min(5).max(50),
-    isGold: Joi.boolean(),
-  };
-
-  return Joi.validate(customer, schema);
-}
 
 module.exports = router;
