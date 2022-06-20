@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const logger = require("./middleware/logger");
 const home = require("./routes/home");
-const movies = require("./routes/movie");
+const genres = require("./routes/movie");
 const customers = require("./routes/customers");
 const express = require("express");
 const app = express();
@@ -13,7 +13,7 @@ mongoose
 
 app.use(express.json());
 app.use(logger);
-app.use("/api/movies", movies);
+app.use("/api/genres", genres);
 app.use("/api/customers", customers);
 app.use("/", home);
 
