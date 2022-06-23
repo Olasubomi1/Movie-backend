@@ -5,24 +5,22 @@ const router = express.Router();
 // Getting the list of genres
 router.get("/", async (req, res) => {
   const genres = await Genre.find().sort("name");
-  console.log(genres);
+  // console.log(genres);
   res.send(genres);
 });
 
 // Adding a new genre to the list of genres
 router.post("/", async (req, res) => {
   const { error } = validateGenre(req.body);
-
   if (error) return res.status(400).send(result.error.details[0].message);
 
-  const genre = new Genre({
-    name: req.body.name,
+  let genre = new Genre({
     genre: req.body.genre,
   });
-  const addedMovie = await genre.save();
-  console.log(addedMovie);
+  genre = await genre.save();
+  // console.log(addedMovie);
 
-  res.send(addedMovie);
+  res.send(genre);
 });
 
 // Getting a genre by its id
