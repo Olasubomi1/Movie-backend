@@ -14,10 +14,10 @@ router.post("/", async (req, res) => {
   const { error } = validateGenre(req.body);
   if (error) return res.status(400).send(result.error.details[0].message);
 
-  let genre = new Genre({
+  const genre = new Genre({
     genre: req.body.genre,
   });
-  genre = await genre.save();
+  await genre.save();
   // console.log(addedMovie);
 
   res.send(genre);
