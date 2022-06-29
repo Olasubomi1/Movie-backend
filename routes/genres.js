@@ -1,3 +1,5 @@
+const auth = require("../middleware/auth");
+const admin = require("../middleware/admin");
 const { Genre, validateGenre } = require("../models/genre");
 const express = require("express");
 const router = express.Router();
@@ -10,9 +12,9 @@ router.get("/", async (req, res) => {
 });
 
 // Adding a new genre to the list of genres
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
   const { error } = validateGenre(req.body);
-  if (error) return res.status(400).send(result.error.details[0].message);
+  if (error) return res.status(400).send(error.details[0].message);
 
   const genre = new Genre({
     genre: req.body.genre,
@@ -62,7 +64,7 @@ router.put("/:id", async (req, res) => {
   res.send(genre);
 });
 // Deleting a genre
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", [auth, admin], async (req, res) => {
   // Look up the genre
   // If not existing, return 404
   const genre = await Genre.findByIdAndRemove(req.params.id);
