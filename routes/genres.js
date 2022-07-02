@@ -5,7 +5,7 @@ const express = require("express");
 const router = express.Router();
 
 // Getting the list of genres
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   const genres = await Genre.find().sort("name");
   // console.log(genres);
   res.send(genres);
