@@ -1,6 +1,7 @@
 const winston = require("winston");
 require("winston-mongodb");
 require("express-async-errors");
+const logger = require("../middleware/logger");
 
 module.exports = function () {
   winston.handleExceptions(
@@ -18,4 +19,6 @@ module.exports = function () {
       db: "mongodb://localhost/moviebackend",
     })
   );
+
+  app.use(logger);
 };
