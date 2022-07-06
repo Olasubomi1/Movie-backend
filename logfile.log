@@ -26,3 +26,7 @@
 {"level":"info","message":"Connected to MongoDB......."}
 {"level":"info","message":"Connected to MongoDB......."}
 {"level":"info","message":"Connected to MongoDB......."}
+{"level":"info","message":"listening to port 3000...","timestamp":"2022-07-06T18:29:41.007Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-06T18:29:41.063Z"}
+{"level":"info","message":"listening to port 3000...","timestamp":"2022-07-06T18:30:47.317Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-06T18:30:47.372Z"}

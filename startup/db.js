@@ -1,11 +1,8 @@
 const winston = require("winston");
 const mongoose = require("mongoose");
-const { level } = require("winston");
+const config = require("config");
 
 module.exports = function () {
-  mongoose
-    .connect("mongodb://localhost/moviebackend", { useUnifiedTopology: true })
-    .then(() =>
-      winston.info({ message: "Connected to MongoDB.......", level: "info" })
-    );
+  const db = config.get("db");
+  mongoose.connect(db).then(() => winston.info(`Connected to ${db}...`));
 };

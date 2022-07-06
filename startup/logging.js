@@ -1,7 +1,9 @@
 const winston = require("winston");
-require("winston-mongodb");
-require("express-async-errors");
+// require("winston-mongodb");
 const logger = require("../middleware/logger");
+require("express-async-errors");
+const express = require("express");
+const app = express();
 
 module.exports = function () {
   winston.handleExceptions(
@@ -13,12 +15,12 @@ module.exports = function () {
     throw ex;
   });
 
-  winston.add(new winston.transports.File({ filename: "logfile.log" }));
-  winston.add(
-    new winston.transports.MongoDB({
-      db: "mongodb://localhost/moviebackend",
-    })
-  );
+  winston.add(winston.transports.File, { filename: "logfile.log" });
+  // winston.add(
+  //   new winston.transports.MongoDB({
+  //     db: "mongodb://localhost/moviebackend",
+  //   })
+  // );
 
   app.use(logger);
 };
