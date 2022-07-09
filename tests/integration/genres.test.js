@@ -1,5 +1,6 @@
 const request = require("supertest");
 const { Genre } = require("../../models/genre");
+const { User } = require("../../models/user");
 // always make sure to write and execute each test like its the only test. otherwise our test won't be repitable.
 // and make sure to clean up the database afterwards
 let server;
@@ -37,6 +38,41 @@ describe("/api/genres", () => {
     it("should return 404 if invalid id is passed", async () => {
       const res = await request(server).get("/api/genres/6");
       expect(res.status).toBe(404);
+    });
+  });
+  describe("POST /", () => {
+    it("should return 401 if client is not logged in", async () => {
+      const res = await request(server)
+        .post("/api/genres")
+        .send({ genre: "genre5" });
+
+      //   console.log(res.status);
+      expect(res.status).toBe(401);
+    });
+
+    it("should return 400 if genre is less than 5 characters", async () => {
+      const token = new User().generateAuthToken();
+
+      const res = await request(server)
+        .post("/api/genres")
+        .set("x-auth-token", token)
+        .send({ genre: "1234" });
+
+      //   console.log(res.status);
+      expect(res.status).toBe(400);
+    });
+
+    it("should return 400 if genre is more than 50 characters", async () => {
+      const token = new User().generateAuthToken();
+
+      const name = new Array(55).join("a");
+      const res = await request(server)
+        .post("/api/genres")
+        .set("x-auth-token", token)
+        .send({ genre: name });
+
+      //   console.log(res.status);
+      expect(res.status).toBe(400);
     });
   });
 });
