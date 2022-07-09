@@ -30,9 +30,9 @@ router.get("/:id", async (req, res) => {
   let genre;
   try {
     genre = await Genre.find({ _id: req.params.id });
-    console.log(genre);
+    // console.log(genre);
   } catch (err) {
-    console.log(err.message);
+    // console.log(err.message);
   }
   if (!genre) {
     console.log("no genre by given id");

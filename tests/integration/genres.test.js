@@ -24,4 +24,19 @@ describe("/api/genres", () => {
       expect(res.body.some((g) => g.name === "genre2")).toBeTruthy();
     });
   });
+  describe("GET /:id", () => {
+    it("should return a genre if valid id is passed", async () => {
+      const genre = new Genre({ genre: "action" });
+      await genre.save();
+      const res = await request(server).get("/api/genres/" + genre._id);
+      //   console.log(res.body[0]);
+      expect(res.status).toBe(200);
+      expect(res.body[0]).toHaveProperty("genre", genre.genre);
+    });
+
+    it("should return 404 if invalid id is passed", async () => {
+      const res = await request(server).get("/api/genres/6");
+      expect(res.status).toBe(404);
+    });
+  });
 });
