@@ -96,7 +96,7 @@ describe("/api/genres", () => {
         .set("x-auth-token", token)
         .send({ genre: "genre6" });
 
-      console.log(res.body);
+      // console.log(res.body);
       expect(res.body).toHaveProperty("_id");
       expect(res.body).toHaveProperty("genre", "genre6");
     });

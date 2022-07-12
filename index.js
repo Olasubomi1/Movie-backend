@@ -9,7 +9,7 @@ require("./startup/validation")();
 // require("./startup/logging")();
 
 // Setting a default PORT
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 6000;
 const server = app.listen(port, () =>
   winston.info(`listening to port ${port}...`)
 );
