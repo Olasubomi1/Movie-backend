@@ -16,8 +16,8 @@ describe("/api/returns", () => {
     rental = new Rental({
       customer: {
         _id: customerId,
-        name: "12345",
-        phone: "12345",
+        name: "12345678",
+        phone: "1234567",
       },
       movie: {
         _id: movieId,
@@ -28,14 +28,14 @@ describe("/api/returns", () => {
     await rental.save();
   });
   afterEach(async () => {
-    server.close();
     await Rental.remove({});
+    await server.close();
   });
+
   it("should return 401 if client is not logged in!", async () => {
     const res = await request(server)
-      .post("./api/returns")
+      .post("/api/returns")
       .send({ customerId, movieId });
-
     expect(res.status).toBe(401);
   });
 });
