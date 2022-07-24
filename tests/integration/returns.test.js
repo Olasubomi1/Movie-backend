@@ -52,7 +52,7 @@ describe("/api/returns", () => {
     const res = await request(server)
       .post("/api/returns")
       .set("x-auth-token", token)
-      .send({ movieId });
+      .send({ customerId });
     expect(res.status).toBe(400);
   });
 });
