@@ -30,3 +30,36 @@
 {"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-06T18:29:41.063Z"}
 {"level":"info","message":"listening to port 3000...","timestamp":"2022-07-06T18:30:47.317Z"}
 {"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-06T18:30:47.372Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:44:35.629Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:44:55.806Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:45:17.036Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:45:47.156Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:45:57.057Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:45:57.097Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:46:17.248Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:46:18.338Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:46:44.350Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:47:04.514Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:47:08.527Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:47:25.662Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:47:55.768Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:48:44.673Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:48:44.685Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:49:04.858Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:49:05.847Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:49:56.005Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:50:22.387Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:50:22.400Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:50:42.562Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:50:43.671Z"}
+{"message":"Operation `genres.insertOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `genres.insertOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/user/Documents/movie-backend/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)\n    at listOnTimeout (node:internal/timers:559:17)\n    at processTimers (node:internal/timers:502:7)","level":"error","timestamp":"2022-07-26T19:51:33.797Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:53:47.185Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend_test...","timestamp":"2022-07-26T19:53:47.253Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend_test...","timestamp":"2022-07-26T19:53:47.280Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:53:47.436Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T19:53:49.163Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend_test...","timestamp":"2022-07-26T19:53:49.244Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T20:06:43.715Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-26T20:06:43.778Z"}
+{"level":"info","message":"listening to port 8000...","timestamp":"2022-07-26T20:06:55.784Z"}
+{"level":"info","message":"Connected to mongodb://localhost/moviebackend...","timestamp":"2022-07-26T20:06:55.842Z"}
